@@ -2,11 +2,10 @@
 applications:
 - name: tracker-timesheets
   instances: 1
-  memory: 256M
+  memory: 500M
   routes:
-  - route: timesheets-pal-ark.apps.evans.pal.pivotal.io
+  - route: timesheets-pal-ark.cfapps.io
   path: Applications/TimesheetsServer/bin/Release/netcoreapp2.1/publish
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-ark.apps.evans.pal.pivotal.io
   services:
   - tracker-timesheets-database
+  - tracker-service-registry

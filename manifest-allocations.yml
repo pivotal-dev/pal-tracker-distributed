@@ -2,11 +2,10 @@
 applications:
 - name: tracker-allocations
   instances: 1
-  memory: 256M
+  memory: 500M
   routes:
-  - route: allocations-pal-ark.apps.evans.pal.pivotal.io
+  - route: allocations-pal-ark.cfapps.io
   path: Applications/AllocationsServer/bin/Release/netcoreapp2.1/publish
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-ark.apps.evans.pal.pivotal.io
   services:
   - tracker-allocations-database
+  - tracker-service-registry
